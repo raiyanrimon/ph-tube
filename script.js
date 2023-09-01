@@ -38,13 +38,15 @@ const showVideo = async (categoryId) => {
         const div = document.createElement('div');
         div.innerHTML = `<div class="card  bg-base-100 shadow-xl">
     <figure class="relative"><img class="w-[300px] h-[200px] opacity-80 bg-black" src="${datas.thumbnail}" alt="video" />
-    <p class="absolute bottom-1 right-10 bg-black font-semibold  text-white">${datas.others?.posted_date ? `${hours} ${min}` : '' }</p>
+    <p class="absolute bottom-1 right-8 bg-black font-semibold  text-white">${datas.others?.posted_date ? `${hours} ${min}` : '' }</p>
     </figure>
     <div class=" mt-5 flex">
-        <div>
-            <img class=" w-20 h-20 rounded-full px-2 py-2 ml-2" src="${datas.authors[0].profile_picture}"/>
+        <div class="avatar ml-2">
+        <div class=" w-20 rounded-full">
+            <img  src="${datas.authors[0].profile_picture}"/>
             </div>
-      <div class="">
+        </div>
+      <div class="ml-5">
         <h2 class="card-title">${datas.title}</h2>
         <div class="flex"> <p>${datas.authors[0].profile_name}</p> &nbsp;
         <p>${datas.authors[0].verified ? '<img style="width:20px; height:20px; " src="Group.png">' : ''} </p> </div>
