@@ -31,14 +31,14 @@ const showVideo = async (categoryId) => {
     }
     dataContainer.forEach(datas => {
         const time = datas.others?.posted_date;
-        const hours = Math.floor(time / 3600) + 'h'
+        const hours = Math.floor(time / 3600) + 'hrs'
         const mins = time % 3600;
         const min = Math.floor(mins / 60) + 'min ago';
     
         const div = document.createElement('div');
         div.innerHTML = `<div class="card  bg-base-100 shadow-xl">
     <figure class="relative"><img class="w-[300px] h-[200px] opacity-80 bg-black" src="${datas.thumbnail}" alt="video" />
-    <p class="absolute bottom-4 right-10  text-white font-bold">${datas.others?.posted_date ? `${hours} ${min}`  : '' }</p>
+    <p class="absolute bottom-1 right-10 bg-black font-semibold  text-white">${datas.others?.posted_date ? `${hours} ${min}` : '' }</p>
     </figure>
     <div class=" mt-5 flex">
         <div>
