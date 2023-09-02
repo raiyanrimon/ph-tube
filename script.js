@@ -3,12 +3,12 @@ const loadData = async () => {
     const data = await res.json();
     const dataContainer = data.data;
     const tabContainer = document.getElementById('tab-container');
+
     dataContainer.forEach(datas => {
         const div = document.createElement('div');
-        div.classList = (`border-2 rounded `);
-        div.innerHTML = `<a onclick="showVideo('${datas.category_id}')" class="tab">${datas.category}</a>`
+        div.innerHTML = `<a onclick="showVideo('${datas.category_id}')" class="tab border-2 active:bg-[#FF1F3D] !important rounded-lg ">${datas.category}</a>`
         tabContainer.appendChild(div);
-        
+
         showVideo('1000');
     })
 
@@ -20,25 +20,25 @@ const showVideo = async (categoryId) => {
     const dataContainer = data.data;
     const videoCardContainer = document.getElementById('video-card');
     videoCardContainer.textContent = '';
-
+    const emptySection = document.getElementById('empty');
+    emptySection.textContent = '';
 
     if (dataContainer.length === 0) {
         const div = document.createElement('div');
-        div.innerHTML = `<img src="Icon.png" alt="">
+        div.classList = `md:mt-10 lg:mt-24`
+        div.innerHTML = `<div class="flex justify-center"><img src="Icon.png" alt=""></div>
         <p class="text-center font-semibold md:text-4xl">Oops!! Sorry, There is no content here</p>`;
-        videoCardContainer.appendChild(div);
-        div.classList = `md:absolute lg:top-1/4 md:left-1/4 lg:left-1/3`
+        emptySection.appendChild(div);
     }
     dataContainer.forEach(datas => {
         const time = datas.others?.posted_date;
         const hours = Math.floor(time / 3600) + 'hrs'
         const mins = time % 3600;
         const min = Math.floor(mins / 60) + 'min ago';
-    
         const div = document.createElement('div');
         div.innerHTML = `<div class="card  bg-base-100 shadow-xl">
     <figure class="relative"><img class="w-[300px] h-[200px] opacity-80 bg-black" src="${datas.thumbnail}" alt="video" />
-    <p class="absolute bottom-1 right-8 bg-black font-semibold  text-white">${datas.others?.posted_date ? `${hours} ${min}` : '' }</p>
+    <p class="absolute bottom-1 right-8 bg-black font-semibold  text-white">${datas.others?.posted_date ? `${hours} ${min}` : ''}</p>
     </figure>
     <div class=" mt-5 flex">
         <div class="avatar ml-2">
@@ -59,8 +59,8 @@ const showVideo = async (categoryId) => {
         videoCardContainer.appendChild(div);
 
     })
-
 }
+
 
 const sortByViews = () => {
     const videoCardContainer = document.getElementById('video-card');
@@ -78,9 +78,33 @@ const sortByViews = () => {
     });
 };
 
-
-
 loadData()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

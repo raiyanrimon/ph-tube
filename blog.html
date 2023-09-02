@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <title>Blog</title>
 
 </head>
 <style>
-    header{
+    header {
         text-align: center;
         margin: 20px auto;
     }
-    .p{
+
+    .p {
         font-size: 30px;
         font-weight: 600;
         text-decoration: none;
@@ -20,17 +21,19 @@
         width: 600px;
 
     }
-    p{
+
+    p {
         font-size: 20px;
     }
-    span{
+
+    span {
         font-size: 30px;
         font-weight: 700;
     }
-    ol{
+
+    ol {
         font-size: 20px;
     }
-   
 </style>
 
 <body>
@@ -40,65 +43,70 @@
     </header>
     <main>
         <section>
-           <div>
-        <p class="p">Discuss the scope of `var`, `let`, and `const`</p>
-        <p>
-       <span> var:</span> <br>
-        <ol><li>Function Scope : it can be accessed throughout the Function If declared in any function.</li>
-           <li> hoisting: variables declared by 'var' are hoisted to the top of the function or global scope.</li>
-         <li> we can redeclare and reassign it</li>
-     </ol>
-        </p>
-        <p>
-            <span>let:</span> <br>
-           <ol>
-            <li>Block scope / local scope: they are limited in '{}' , If they are defined in it. we can't access this out of the scope.</li>
-            <li>not hoisted: it is not hoisted the variables.</li>
-            <li>we can reassign it but can't redeclare.</li>
-           </ol>
-        </p>
-        <p>
-            <span>const:</span> <br>
-            <ol>
-                <li>Block scope / local scope: they are limited in '{}' , If they are defined in it. we can't access this out of the scope.</li>
-                <li>not hoisted: it is not hoisted the variables.</li>
-            <li>we can't redeclare or reassign it and it is immutable.</li>
-            </ol>
+            <div>
+                <p class="p">Discuss the scope of `var`, `let`, and `const`</p>
+                <p>
+                    <span> var:</span> <br>
+                <ol>
+                    <li>Function Scope : it can be accessed throughout the Function If declared in any function.</li>
+                    <li> hoisting: variables declared by 'var' are hoisted to the top of the function or global scope.
+                    </li>
+                    <li> we can redeclare and reassign it</li>
+                </ol>
+                </p>
+                <p>
+                    <span>let:</span> <br>
+                <ol>
+                    <li>Block scope / local scope: they are limited in '{}' , If they are defined in it. we can't access
+                        this out of the scope.</li>
+                    <li>not hoisted: it does not hoisted the variables.</li>
+                    <li>we can reassign it but can't redeclare.</li>
+                </ol>
+                </p>
+                <p>
+                    <span>const:</span> <br>
+                <ol>
+                    <li>Block scope / local scope: they are limited in '{}' , If they are defined in it. we can't access
+                        this out of the scope.</li>
+                    <li>not hoisted: it does not hoisted the variables.</li>
+                    <li>we can't redeclare or reassign it and it is immutable.</li>
+                </ol>
 
-        </p>
-            
-           </div>
+                </p>
 
-           <div>
-            <p class="p">Tell us the use cases of `null` and `undefined</p>
-            <span>Null:</span>
-          <ol>
-            <li>If variable's value is empty or has no value, then we can use null</li>
-            <li>clearing or reset the value</li>
-            <li>we can use it as placeholder</li>
-            <li>we can use it to compare  </li>
-          </ol>
-          <span>Undefined:</span>
-          <ol>
-            <li>If a variable is declared but value is not defined</li>
-            <li>If function is without return or return without value</li>
-            <li>If a function's parameter is not defined</li>
-            <li>If object has no property</li>
-            <li>If any element of array  is deleted</li>
-            <li>If value is set as undefined</li>
-           
-          </ol>
-           </div>
+            </div>
 
-           <div>
-            <p class="p">What do you mean by REST API?</p>
-            <p>A REST API is an API , REST  full form is Representational State Transfer.
-                REST API creates an object and there after sends the values of the objects in response to the client request. </p>
-           </div>
-        
+            <div>
+                <p class="p">Tell us the use cases of `null` and `undefined</p>
+                <span>Null:</span>
+                <ol>
+                    <li>If variable's value is empty or has no value, then we can use null</li>
+                    <li>clearing or reset the value</li>
+                    <li>we can use it as placeholder</li>
+                    <li>we can use it to compare </li>
+                </ol>
+                <span>Undefined:</span>
+                <ol>
+                    <li>If a variable is declared but value is not defined</li>
+                    <li>If function is without return or return without value</li>
+                    <li>If a function's parameter is not defined</li>
+                    <li>If object has no property</li>
+                    <li>If any element of array is deleted</li>
+                    <li>If value is set as undefined</li>
+
+                </ol>
+            </div>
+
+            <div>
+                <p class="p">What do you mean by REST API?</p>
+                <p>A REST API is an API , REST full form is Representational State Transfer.
+                    REST API creates an object and there after sends the values of the objects in response to the client
+                    request. </p>
+            </div>
+
         </section>
     </main>
-    
+
 
 </body>
 
